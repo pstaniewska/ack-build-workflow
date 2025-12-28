@@ -196,8 +196,14 @@ jobs:
             --current-branch \
             --optimized-fetch \
             --force-sync \
-            --fetch-submodules \
             -j$(nproc --all)
+
+      - name: Replace KernelSU with SukiSU-Ultra
+        working-directory: kernel-build
+        run: |
+          rm -rf common/KernelSU-Next
+          git clone --depth 1 https://github.com/pstaniewska/SukiSU-Ultra.git common/KernelSU-Next
+          rm -rf common/KernelSU-Next/.git
 
       - name: Build, and process the kernel(s)
         working-directory: kernel-build
