@@ -204,6 +204,11 @@ jobs:
           rm -rf common/KernelSU-Next
           git clone --depth 1 https://github.com/pstaniewska/SukiSU-Ultra.git common/KernelSU-Next
           rm -rf common/KernelSU-Next/.git
+          
+          # Clone Baseband-guard submodule
+          rm -rf common/Baseband-guard
+          git clone --depth 1 https://github.com/vc-teahouse/Baseband-guard.git common/Baseband-guard
+          rm -rf common/Baseband-guard/.git
 
       - name: Build, and process the kernel(s)
         working-directory: kernel-build
