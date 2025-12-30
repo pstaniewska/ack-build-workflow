@@ -199,7 +199,7 @@ jobs:
         working-directory: kernel-build
         run: |
           rm -rf common/KernelSU-Next
-          git clone --depth 1 https://github.com/pstaniewska/SukiSU-Ultra.git common/KernelSU-Next
+          git clone --depth 1 -b susfs-integration https://github.com/pstaniewska/SukiSU-Ultra.git common/KernelSU-Next
           rm -rf common/KernelSU-Next/.git
           
           rm -rf common/Baseband-guard
