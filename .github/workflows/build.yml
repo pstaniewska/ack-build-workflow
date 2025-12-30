@@ -68,7 +68,7 @@ on:
       build_configs:
         description: 'Space-separated list of build configurations'
         required: true
-        default: 'build.config.gki.aarch64.chickernel build.config.gki.aarch64.chickernel.ksun build.config.gki.aarch64.chickernel.ksun.susfs'
+        default: 'build.config.gki.aarch64.chickernel.sukisu.stealth'
         type: string
       clean_build:
         description: 'Clean build (remove cached kernel source)'
