@@ -138,6 +138,7 @@ jobs:
           rm -rf ${{ github.workspace }}/kernel-build/common
           rm -rf ${{ github.workspace }}/kernel-build/out
           rm -rf ${{ github.workspace }}/kernel-build/bazel-*
+          ccache -C || true
 
       - name: Setup build workspace and a local manifest
         env:
